@@ -1,13 +1,163 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
-    font-size: 62, 5%;
+  font-size: 62.5%;
+
+  /*colors*/
+  --black: #000000;
+  --white: #ffffff;
+  --blue-700: #34355b;
+  --blue-600: #190361;
+  --purple-400: #bb00ff;
+  --blue-200: #e4edf1;
+  --orange-700: #ff9500;
+
+  /*fonts*/
+  --ff-tittle: "Montserrat", sans-serif;
+  --ff-global: "DM Sans", sans-serif;
+  --ff-special: "Dancing Script", cursive;
 }
 
 body {
-    font-size: 1.6rem;
+  font-size: 1.6rem;
+  font-family: var(--ff-global) serif;
+  background: linear-gradient(195deg, var(--purple-400), var(--blue-600));
+  height: 100vh;
+  display: flex;
+  place-items: center;
+  justify-content: center;
+}
+
+/*card style screen1*/
+.card {
+  background-color: var(--white);
+  padding: 4.8rem 6.4rem;
+  border-radius: 0.5rem;
+  box-shadow: -0.2rem 1rem 3rem var(--black);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card h2 {
+  font-style: 2.4rem;
+  font-weight: bold;
+  margin-bottom: 1.4rem;
+  font-family: var(--ff-tittle);
+  color: var(--blue-700);
+}
+
+.card p {
+  font-style: 1.5rem;
+  font-family: var(--ff-global);
+  color: var(--blue-700);
+  margin-bottom: 2rem;
+}
+
+.card figure {
+  cursor: pointer;
+}
+
+/*card style screen2*/
+.screen2 .card h2,
+#fortune-phrase {
+  width: 30rem;
+  text-align: center;
+}
+
+.card button {
+  background-color: var(--orange-700);
+  color: var(--white);
+  border: none;
+  padding: 1.6rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+  font-family: var(--ff-global);
+  border-radius: 0.4rem;
+  cursor: pointer;
+  transition: 0.2s all ease-in-out;
+}
+
+.card #fortune-phrase {
+  background-color: var(--blue-200);
+  font-family: var(--ff-special);
+  font-size: 2.4rem;
+  padding: 1rem;
+  animation: appear 1s 1ms ease-in-out both;
+}
+
+.card button:hover {
+  opacity: 0.8;
+  color: var(--black);
+}
+
+/* hide content */
+.hide {
+  display: none;
+}
+
+.screen1 .card figure:hover {
+  animation: shake 0.6s ease 0.1s infinite normal forwards;
+}
+
+@keyframes appear {
+  from {
+    transform: translateY(20rem) scale(0);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0) scale(1);
+    opacity: (1);
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(-0.5rem);
+  }
+
+  10% {
+    transform: translateY(0.5rem);
+  }
+
+  20% {
+    transform: translateX(-0.5rem);
+  }
+
+  30% {
+    transform: translateY(0.5rem);
+  }
+
+  40% {
+    transform: translateX(-0.5rem);
+  }
+
+  50% {
+    transform: translateX(0.5rem);
+  }
+
+  60% {
+    transform: translateY(-0.5rem);
+  }
+
+  70% {
+    transform: translateX(0.5rem);
+  }
+
+  80% {
+    transform: translateY(-0.5rem);
+  }
+
+  90% {
+    transform: translateX(0.5rem);
+  }
+
+  100% {
+    transform: translateX(-0.5rem);
+  }
 }
