@@ -4,6 +4,7 @@ const fortuneCookie = document.querySelector(".screen1 .card figure");
 const resetButton = document.getElementById("open-again");
 
 let fortune = [
+  "Se alguém está tão cansado que não possa te dar um sorriso, deixa-lhe o teu.",
   "A vida trará coisas boas se tiver paciência.",
   "Demonstre amor e alegria em todas as oportunidades e verá que a paz nasce dentro de si.",
   "Não compense na ira o que lhe falta na razão.",
@@ -43,4 +44,12 @@ function randomFortune() {
   let randomPhrases = Math.floor(Math.random() * allPhrases);
 
   screen2.querySelector("p").textContent = `${fortune[randomPhrases]}`;
+}
+
+
+
+let n = 0
+
+for (let i = 0; i < n ; i++){
+  
 }

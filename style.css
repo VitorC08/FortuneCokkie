@@ -15,6 +15,7 @@
   --purple-400: #bb00ff;
   --blue-200: #e4edf1;
   --orange-700: #ff9500;
+  --gray-400: #808080;
 
   /*fonts*/
   --ff-tittle: "Montserrat", sans-serif;
@@ -27,9 +28,8 @@ body {
   font-family: var(--ff-global) serif;
   background: linear-gradient(195deg, var(--purple-400), var(--blue-600));
   height: 100vh;
-  display: flex;
+  display: grid;
   place-items: center;
-  justify-content: center;
 }
 
 /*card style screen1*/
@@ -63,9 +63,9 @@ body {
 }
 
 /*card style screen2*/
-.screen2 .card h2,
+.card h2,
 #fortune-phrase {
-  width: 30rem;
+  width: 28rem;
   text-align: center;
 }
 
@@ -87,6 +87,7 @@ body {
   font-family: var(--ff-special);
   font-size: 2.4rem;
   padding: 1rem;
+  box-shadow: .2rem .2rem .3rem var(--gray-400);
   animation: appear 1s 1ms ease-in-out both;
 }
 
@@ -101,7 +102,7 @@ body {
 }
 
 .screen1 .card figure:hover {
-  animation: shake 0.6s ease 0.1s infinite normal forwards;
+  animation: shake 0.7s ease 0.1s infinite normal forwards;
 }
 
 @keyframes appear {
