@@ -21,6 +21,7 @@ let fortune = [
   "O bom-senso vale mais do que muito conhecimento",
 ];
 
+document.addEventListener("keypress", handleEnter);
 resetButton.addEventListener("click", resetButtonClick);
 fortuneCookie.addEventListener("click", toogleVisibility);
 
@@ -46,10 +47,10 @@ function randomFortune() {
   screen2.querySelector("p").textContent = `${fortune[randomPhrases]}`;
 }
 
-
-
-let n = 0
-
-for (let i = 0; i < n ; i++){
-  
+function handleEnter(event){
+  if(event.key == 'Enter' && screen2.classList.contains('hide')){
+    switchScreen()
+  } else if (event.key == 'Enter' && screen1.classList.contains("hide")){
+    resetButtonClick()
+  }
 }
