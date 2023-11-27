@@ -50,6 +50,7 @@ function randomFortune() {
 function handleEnter(event){
   if(event.key == 'Enter' && screen2.classList.contains('hide')){
     switchScreen()
+    randomFortune()
   } else if (event.key == 'Enter' && screen1.classList.contains("hide")){
     resetButtonClick()
   }
